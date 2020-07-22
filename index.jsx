@@ -1,3 +1,32 @@
+class Game extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = { full: false };
+    }
+
+    render() {
+        console.log(this.state.full);
+        const myStyle = {
+            marginTop: "20px",
+        }
+
+        const nonfull = (<div className="game"
+            style={myStyle}>
+
+            <h1> {this.props.title} </h1>
+            <div className="details">
+                <img src={this.props.imageUrl} />
+                <p> {this.props.description}</p>
+            </div>
+
+        </div >)
+
+        let toDisplay = nonfull;
+
+        return toDisplay;
+    }
+}
 
 class App extends React.Component {
     state = {
